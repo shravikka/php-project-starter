@@ -11,15 +11,6 @@ php:
 env:
   - HHVM=true
 
-matrix:
-  include:
-    - php: 5.4
-      dist: precise
-    - php: 5.3
-      dist: precise      
-  allow_failures:
-    - php: hhvm
-
 before_script:
   - composer install --prefer-dist --dev
   - mkdir -p build/logs
